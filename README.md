@@ -1,1 +1,1 @@
-# personaliced-roadmap-generator
+# personalized-roadmap-generator
