@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Learning Roadmap Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Learning Roadmap Creator</h1>
+        <p>Create a customized learning roadmap.</p>
+        
+        <!-- Learning Plan Form -->
+
+        <form id="roadmapForm">
+            
+            <!-- Main Topic (as Text Input) -->
+            <label for="topic">Enter the topic you want a roadmap for:</label>
+            <input type="text" id="topic" name="topic" required placeholder="e.g., Machine Learning, Web Development, Project Management etc.">
+            
+            <!-- Study Duration -->
+            <label for="duration">Study duration (in months):</label>
+            <input type="number" id="duration" name="duration" min="1" max="12" required placeholder="Enter number of months">
+            
+            <!-- Division Period -->
+            <label for="division">Choose study plan division period:</label>
+            <select id="division" name="division" required>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+            
+            <!-- Resource Checkboxes -->
+            <fieldset>
+                <legend>Resources you want to include:</legend>
+                <label><input type="checkbox" name="resources" value="books"> Books</label><br>
+                <label><input type="checkbox" name="resources" value="youtube"> YouTube</label><br>
+                <label><input type="checkbox" name="resources" value="coursera"> Coursera Courses</label><br>
+                <label><input type="checkbox" name="resources" value="research-papers"> Research Papers</label><br>
+                <label><input type="checkbox" name="resources" value="other-online-resources"> Other Online Resources</label>
+            </fieldset>
+            
+            <!-- Current Skill Level -->
+            <label for="skillLevel">What's your current skill level?</label>
+            <textarea id="skillLevel" name="skillLevel" rows="4" placeholder="Describe your level in your target skill" required></textarea>
+            
+            <!-- Submit Button -->
+            <button type="submit">Generate Roadmap</button>
+        </form>
+
+        <!-- Roadmap Display Section -->
+        <div id="roadmapTable"></div>
+    </div>
+    
+    <!-- Include the JavaScript files -->
+    <script src="script.js"></script>
+    <script src="analytics.js"></script> <!-- Google Analytics script -->
+</body>
+</html>
